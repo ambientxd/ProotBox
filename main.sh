@@ -47,20 +47,25 @@ barBox="${clorange}[${productName}]${clend}"
 barBoxInstall="${clcyan}[Box Installation]${clend}"
 barPostInstall="${clyellow}[PostInstall]${clend}"
 
+oldDir="$PWD"
+
 # Sourcing the files
-source "$InstallToPath/lib/core/boxes/gatherimage.sh"
-source "$InstallToPath/lib/core/boxes/install.sh"
-source "$InstallToPath/lib/core/boxes/installHandler.sh"
-source "$InstallToPath/lib/core/boxes/startbox.sh"
+cd $InstallToPath &>/dev/null
+source "lib/core/boxes/gatherimage.sh"
+source "lib/core/boxes/install.sh"
+source "lib/core/boxes/installHandler.sh"
+source "lib/core/boxes/startbox.sh"
 
-source "$InstallToPath/lib/core/installer/checks.sh"
+source "lib/core/installer/checks.sh"
 
-source "$InstallToPath/lib/others/cdroot.sh"
-source "$InstallToPath/lib/others/cli.sh"
-source "$InstallToPath/lib/others/frontend.sh"
+source "lib/others/cdroot.sh"
+source "lib/others/cli.sh"
+source "lib/others/frontend.sh"
 
 # Config sources
 source "$InstallToPath/config/boxes.sh"
+
+cd $oldDir
 
 
 
@@ -351,7 +356,7 @@ else
         oldDir="$PWD"
         cd /tmp
         git clone $productGitURL prootbox_github
-        cd prootbot_github
+        cd prootbox_github
         bash main.sh
         cd $oldDir
     fi
