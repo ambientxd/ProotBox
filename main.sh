@@ -23,7 +23,7 @@ productName="ProotBox"
 productVersion="0.1"
 productLicense="GNU General Public License v3.0"
 productAuthor="ambient"
-productGitURL="http://localhost:5500"
+productGitURL="https://github.com/ambientxd/ProotBox -b testing"
 
 # Colors handling
 ### Colors
