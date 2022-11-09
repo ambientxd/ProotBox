@@ -342,7 +342,7 @@ if [ -d "$InstallToPath" ]; then
 
 else
 
-    if [ -f "./lib/core/installer/offlineInstall.sh" ]; then
+    if [ -f "$InstallToPath/lib/core/installer/offlineInstall.sh" ]; then
         source "./lib/core/installer/offlineInstall.sh"
         runChecks
         offlineInstall
