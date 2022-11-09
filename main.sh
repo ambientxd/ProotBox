@@ -9,7 +9,7 @@
 
 ### Configuration for Prootbox Installer ###
 ProotBox_UseColor=true
-InstallToPath="$HOME/.local/share/prootbox"
+InstallToPath="/tmp/prootbox"
 BoxesPath="$HOME/.local/share/prootboxes"
 
 ForceInstallationOverwrite="false" # false, true
